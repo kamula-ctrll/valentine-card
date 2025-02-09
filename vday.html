@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Card</title>
+    <link rel="stylesheet" href="vday.css">
+</head>
+<body>
+    <img src="teddy.jpeg" class="side-image left-image">
+    <img src="tedddy.jpeg" class="side-image right-image">
+    <img src="valllyy.jpeg" class="top-image left-top">
+    <img src="download.jpeg" class="top-image right-top">
+    <img src="flow.jpg" class="bottom-image left-bottom">
+    <img src="flowers.jpg" class="bottom-image right-bottom">
+
+    <div class="card">
+        <h1>special mail for waffles ❤️</h1>
+        <p>to the girl i love with my soul💕 </p>
+        <p class="heart">♥</p>
+        <button class="btn" onclick="startAnimation()">Will you be my Valentine?</button>
+        <div class="btn-container" id="btnContainer" style="display: none;">
+            <button class="btn" onclick="showMessage('yesMessage')">Yes</button>
+            <button class="btn" onclick="showNoMessage()">No</button>
+        </div>
+        <p class="hidden-message" id="yesMessage" style="display: none;">maajabu umefinya yes ya kwanza😂thank you for letting me be your valentine💖</p>
+        <p class="hidden-message" id="noMessage" style="display: none;">ona uyu,you really thought no was an option?</p>
+        <button class="btn extra-yes" id="extraYes" onclick="showMessage('extraYesMessage')">Yes</button>
+        <p class="hidden-message" id="extraYesMessage" style="display: none;">mmh thought so🌝i love you bubblegum💖</p>
+    
+    <script>
+        function startAnimation() {
+            document.getElementById('btnContainer').style.display = 'block';
+        }
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+        }function showMessage(id) {
+            document.getElementById('yesMessage').style.display = 'none';
+            document.getElementById('noMessage').style.display = 'none';
+            document.getElementById('extraYes').style.display = 'none';
+            document.getElementById('extraYesMessage').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+        function showNoMessage() {
+            document.getElementById('noMessage').style.display = 'block';
+            document.getElementById('extraYes').style.display = 'block';
+        }
+    </script>
+</body>
+</html>  
